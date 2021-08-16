@@ -29,4 +29,22 @@
 - Webpack 5 支持在请求中处理协议
 - 支持 data 支持 Base64 或原始编码,`MimeType`可以在`module.rule`中被映射到加载器和模块类型
 
+## 4. moduleIds & chunkIds 的优化
 
+### 概念和选项
+
+- module: 每一个文件其实都可以看成一个 module
+- chunk: webpack 打包最终生成的代码块，代码块会生成文件，一个文件对应一个 chunk
+- 在 webpack5 之前，没有从 entry 打包的 chunk 文件，都会以 1、2、3...的文件命名方式输出,删除某些些文件可能会导致缓存失效
+- 在生产模式下，默认启用这些功能 chunkIds: "deterministic", moduleIds: "deterministic"，此算法采用`确定性`的方式将短数字 ID(3 或 4 个字符)短 hash 值分配给 modules 和 chunks
+- chunkId 设置为 deterministic，则 output 中 chunkFilename 里的[name]会被替换成确定性短数字 ID
+- 虽然 chunkId 不变(不管值是 deterministic | natural | named)，但更改 chunk 内容，chunkhash 还是会改变的
+
+| 可选值        | 含义                           | 示例          |
+| ------------- | ------------------------------ | ------------- |
+| natural       | 按使用顺序的数字 ID            | 1             |
+| named         | 方便调试的高可读性 id          | src_two_js.js |
+| deterministic | 根据模块名称生成简短的 hash 值 | 915           |
+| size          | 根据模块大小生成的数字 id      | 0             |
+
+- deterministic:当文件名超过 999 个有可能出现 hash 冲突
