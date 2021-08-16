@@ -9,12 +9,22 @@ module.exports = {
     type: "filesystem", // memory内存(默认值,快) filesystem文件系统(慢一些,但可以持久化)
     // cacheDirectory: path.resolve(__dirname, "node_modules/.cache/webpack"), // 缓存目录
   },
-  entry: "./src/index.js",
-  output: { filename: "bundle.js", path: path.resolve(__dirname, "dist") },
+  entry: {
+    main: "./src/index.js",
+  },
+  output: {
+    filename: "[name].js", // 入口代码块文件名的生成规则
+    path: path.resolve(__dirname, "history/natureDist"),
+    chunkFilename: "[name].js", // 非入口模块文件名的生成规则
+  },
   devServer: {
     port: 8080,
     open: true,
     contentBase: "./dist",
+  },
+  optimization: {
+    moduleIds: "natural",
+    chunkIds: "natural",
   },
   module: {
     rules: [
