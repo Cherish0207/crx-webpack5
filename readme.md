@@ -63,3 +63,5 @@ package.json
 ```json
 "sideEffects": false // 告诉webpack项目中的代码没有任何副作用,可以大胆tree shaking掉
 ```
+
+## 7.mode-federation 模块联邦
