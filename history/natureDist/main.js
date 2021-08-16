@@ -280,8 +280,8 @@ var __webpack_exports__ = {};
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-__webpack_require__.e(/*! import() */ 1).then(__webpack_require__.t.bind(__webpack_require__, /*! ./a */ 1, 23));
-__webpack_require__.e(/*! import() */ 2).then(__webpack_require__.t.bind(__webpack_require__, /*! ./b */ 2, 23));
-__webpack_require__.e(/*! import() */ 3).then(__webpack_require__.t.bind(__webpack_require__, /*! ./c */ 3, 23));
+// import("./a");
+__webpack_require__.e(/*! import() */ 1).then(__webpack_require__.t.bind(__webpack_require__, /*! ./b */ 1, 23));
+__webpack_require__.e(/*! import() */ 2).then(__webpack_require__.t.bind(__webpack_require__, /*! ./c */ 2, 23));
 /******/ })()
 ;
