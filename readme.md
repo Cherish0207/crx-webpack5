@@ -22,3 +22,11 @@
 - asset 在导出一个 data URI 和发送一个单独的文件之间自动选择。之前通过使用  `url-loader`，并且配置资源体积限制实现
 - [Rule.type](https://webpack.js.org/configuration/module/#rule)
 - [asset-modules](https://webpack.js.org/guides/asset-modules/)
+
+## 3. URIs
+
+- [experiments](https://webpack.js.org/configuration/experiments/#experiments)
+- Webpack 5 支持在请求中处理协议
+- 支持 data 支持 Base64 或原始编码,`MimeType`可以在`module.rule`中被映射到加载器和模块类型
+
+
