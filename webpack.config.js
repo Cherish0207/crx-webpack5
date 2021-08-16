@@ -41,6 +41,10 @@ module.exports = {
         },
       },
       {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.png$/,
         type: "asset/resource", // 对标 file-loader
       },
