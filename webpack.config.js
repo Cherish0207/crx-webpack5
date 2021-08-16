@@ -14,7 +14,7 @@ module.exports = {
   },
   output: {
     filename: "[name].js", // 入口代码块文件名的生成规则
-    path: path.resolve(__dirname, "history/natureDist"),
+    path: path.resolve(__dirname, "history/treeShakingDist"),
     chunkFilename: "[name].js", // 非入口模块文件名的生成规则
   },
   devServer: {
@@ -25,6 +25,7 @@ module.exports = {
   optimization: {
     moduleIds: "named", // 模块名称的生成规则
     chunkIds: "named", // 代码块名称的生成规则
+    usedExports: true, // 标志使用到的导出
   },
   module: {
     rules: [
