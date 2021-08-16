@@ -14,7 +14,7 @@ module.exports = {
   },
   output: {
     filename: "[name].js", // 入口代码块文件名的生成规则
-    path: path.resolve(__dirname, "history/treeShakingDist"),
+    path: path.resolve(__dirname, "history/sideEffectDist"),
     chunkFilename: "[name].js", // 非入口模块文件名的生成规则
   },
   devServer: {
