@@ -55,3 +55,11 @@
 - webpack4 里的 tree-shaking 作用很小
 
   深度作用域判断
+
+## 6.sideEffects
+
+package.json
+
+```json
+"sideEffects": false // 告诉webpack项目中的代码没有任何副作用,可以大胆tree shaking掉
+```
