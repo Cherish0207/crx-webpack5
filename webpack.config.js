@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-  mode: "development",
+  mode: "production",
   devtool: false,
   cache: {
     // 如果使用filesystem,就不要用cnpm安装包了,webpack5和cnpm有冲突,使用cnpm install安装会卡死 (npm yarn都可以)

@@ -53,3 +53,5 @@
 ## 5.tree-shaking
 
 - webpack4 里的 tree-shaking 作用很小
+
+  深度作用域判断
