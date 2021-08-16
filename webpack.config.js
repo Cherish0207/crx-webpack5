@@ -1,0 +1,39 @@
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+module.exports = {
+  mode: "development",
+  devtool: false,
+  cache: {
+    // 如果使用filesystem,就不要用cnpm安装包了,webpack5和cnpm有冲突,使用cnpm install安装会卡死 (npm yarn都可以)
+    // http://github.com/cnpm/cnpm/issues/335
+    type: "filesystem", // memory内存(默认值,快) filesystem文件系统(慢一些,但可以持久化)
+    // cacheDirectory: path.resolve(__dirname, "node_modules/.cache/webpack"), // 缓存目录
+  },
+  entry: "./src/index.js",
+  output: { filename: "bundle.js", path: path.resolve(__dirname, "dist") },
+  devServer: {
+    port: 8080,
+    open: true,
+    contentBase: "./dist",
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        include: path.resolve("src"),
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
+        },
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./public/index.html"),
+    }),
+  ],
+};
