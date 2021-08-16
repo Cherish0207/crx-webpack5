@@ -195,7 +195,7 @@
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			179: 0
+/******/ 			"main": 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
@@ -281,7 +281,7 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 // import("./a");
-__webpack_require__.e(/*! import() */ 390).then(__webpack_require__.t.bind(__webpack_require__, /*! ./b */ 390, 23));
-__webpack_require__.e(/*! import() */ 950).then(__webpack_require__.t.bind(__webpack_require__, /*! ./c */ 950, 23));
+__webpack_require__.e(/*! import() */ "src_b_js").then(__webpack_require__.t.bind(__webpack_require__, /*! ./b */ "./src/b.js", 23));
+__webpack_require__.e(/*! import() */ "src_c_js").then(__webpack_require__.t.bind(__webpack_require__, /*! ./c */ "./src/c.js", 23));
 /******/ })()
 ;

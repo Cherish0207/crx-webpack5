@@ -23,8 +23,8 @@ module.exports = {
     contentBase: "./dist",
   },
   optimization: {
-    moduleIds: "deterministic",
-    chunkIds: "deterministic",
+    moduleIds: "named", // 模块名称的生成规则
+    chunkIds: "named", // 代码块名称的生成规则
   },
   module: {
     rules: [

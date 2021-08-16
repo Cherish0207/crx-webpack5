@@ -1,6 +1,6 @@
-(self["webpackChunkcrx_webpack5"] = self["webpackChunkcrx_webpack5"] || []).push([[390],{
+(self["webpackChunkcrx_webpack5"] = self["webpackChunkcrx_webpack5"] || []).push([["src_b_js"],{
 
-/***/ 390:
+/***/ "./src/b.js":
 /*!******************!*\
   !*** ./src/b.js ***!
   \******************/

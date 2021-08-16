@@ -48,3 +48,4 @@
 | size          | 根据模块大小生成的数字 id      | 0             |
 
 - deterministic:当文件名超过 999 个有可能出现 hash 冲突
+- 一般开发环境下 named,生产环境 deterministic
