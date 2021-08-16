@@ -23,8 +23,8 @@ module.exports = {
     contentBase: "./dist",
   },
   optimization: {
-    moduleIds: "natural",
-    chunkIds: "natural",
+    moduleIds: "deterministic",
+    chunkIds: "deterministic",
   },
   module: {
     rules: [
