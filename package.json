@@ -7,7 +7,10 @@
     "serve": "webpack serve",
     "build": "webpack"
   },
-  "sideEffects": ["*.css"],
+  "sideEffects": [
+    "*.css",
+    "@babel/polyfill"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

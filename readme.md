@@ -65,3 +65,27 @@ package.json
 ```
 
 ## 7.mode-federation 模块联邦
+
+# 总结
+
+webpack4 --> webpack5 主要是性能提升了,用法变化不大
+
+## 其他
+
+### 类的副作用
+
+tree shaking 为啥不能优化 class 里的方法?
+其实是可以的 `/*-PURE*/`
+默认不行是因为 class 写法比较难判断是否有副作用
+babel 把 class 编译成 function 时,类的方法可能会有副作用代码,如果想要 treeshaking,需要加上`/*-PURE*/`标识,表示这个类里没有副作用
+
+errboundary
+
+- 手写模块联邦的实现原理,ModuleFederationPlugin 插件编写
+- 手写 rollup
+
+对象 key 不能被 tree-shaking
+
+姜老师--算法
+直播课 训练营 专题课
+[lowcode](http://www.ayqy.net/blog/low-code-frontend/)
